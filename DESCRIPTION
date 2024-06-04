@@ -1,0 +1,20 @@
+Package: futureverse
+Title: Easily Install and Load the 'Futureverse'
+Version: 0.0.0-9001
+Imports:
+    future,
+    future.apply,
+    furrr,
+    doFuture,
+    progressr
+Suggests:
+    future.batchtools,
+    future.callr,
+    future.mirai
+Authors@R: c(person("Henrik", "Bengtsson", role=c("aut", "cre", "cph"),
+                                          email = "henrikb@braju.com"))
+Description: The 'futureverse' is a set of packages for parallel and distributed process with the 'future' package at its core. This package is designed to make it easy to install and load multiple 'futureverse' packages in a single step. Learn more about the 'futureverse' at <https://www.futureverse.org>.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
