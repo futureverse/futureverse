@@ -1,6 +1,6 @@
 Package: futureverse
 Title: Easily Install and Load the 'Futureverse'
-Version: 0.0.0-9001
+Version: 0.0.0-9002
 Imports:
     future,
     future.apply,

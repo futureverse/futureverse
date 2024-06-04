@@ -2,12 +2,29 @@
 
 The [Futureverse] is a unifying framework for parallelization and
 distributed processing in R. This package, **futureverse**, is a
-utility wrapper package that makes it easy to install the most common
-Futureverse packages in one go.  Call:
+utility wrapper package that makes it easy to install and load the
+most common Futureverse packages in one go.
+
+
+## Usage
+
+`library(tidyverse)` will load the common Futureverse packages:
+
+
+* **[future]** - the core Futureverse package
+* **[future.apply]** - Futureverse variants of base-R apply functions
+* **[furrr]** - Futureverse variants of **purrr** apply functions
+* **[doFuture]** - Futureverse adaptors for the **foreach** package
+* **[progressr]** - Near-live progress updates when using Futureverse
+
+
+## Installation
+
+Call:
 
 ```r
-if (requireNamespace("remotes")) install.packages("remotes")
-remotes::install_github("futureverse/futureverse")
+options(repos = c("https://futureverse.r-universe.dev", getOption("repos")))
+install.packages("futureverse")
 ```
 
 to install **[future]**, **[future.apply]**, **[furrr]**,
@@ -17,7 +34,7 @@ To install also additional parallel backends, **future.batchtools**,
 **future.callr**, and **future.mirai**, use:
 
 ```r
-remotes::install_github("futureverse/futureverse", dependencies = TRUE)
+install.packages("futureverse", dependencies = TRUE)
 ```
 
 [Futureverse]: https://www.futureverse.org
