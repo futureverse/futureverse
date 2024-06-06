@@ -8,7 +8,7 @@ most common Futureverse packages in one go.
 
 ## Usage
 
-`library(tidyverse)` will load the common Futureverse packages:
+`library(futureverse)` will load the common Futureverse packages:
 
 
 * **[future]** - the core Futureverse package
