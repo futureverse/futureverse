@@ -6,7 +6,7 @@
 \alias{futureverse-package}
 \title{futureverse: Easily Install and Load the 'Futureverse'}
 \description{
-The 'futureverse' is a set of packages for parallel and distributed process with the 'future' package \doi{10.32614/RJ-2021-048} at its core. This package is designed to make it easy to install and load multiple 'futureverse' packages in a single step. Learn more about the 'futureverse' at \url{https://www.futureverse.org}. This package is intended for end-users, interactive use, and R scripts. Packages must not list it as a dependency - instead, explicitly declare each Futureverse package as a dependency as needed.
+The 'futureverse' is a set of packages for parallel and distributed process with the 'future' package \doi{10.32614/RJ-2021-048} at its core. This package is designed to make it easy to install and load multiple 'futureverse' packages in a single step. Learn more about the 'futureverse' at \url{https://www.futureverse.org}. This package is intended for end-users, interactive use, and R scripts. Packages must not list it as a dependency - instead, explicitly declare each 'Futureverse' package as a dependency as needed.
 }
 \author{
 \strong{Maintainer}: Henrik Bengtsson \email{henrikb@braju.com} [copyright holder]
