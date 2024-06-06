@@ -10,3 +10,5 @@
  
  * Add `futureverse_deps()`.
  
+ * Add `futureverse_packages()`.
+ 
