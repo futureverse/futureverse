@@ -13,6 +13,9 @@ tidyverse packages.}
 \item{repos}{The repositories to use to check for updates.
 Defaults to \code{getOption("repos")}.}
 }
+\value{
+Returns nothing; outputs installation instructions, if needed.
+}
 \description{
 This will check to see if all Futureverse packages (and optionally, their
 dependencies) are up-to-date, and will install after an interactive

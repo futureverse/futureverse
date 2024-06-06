@@ -9,6 +9,9 @@ futureverse_packages(include_self = TRUE)
 \arguments{
 \item{include_self}{Include \strong{futureverse} in the list?}
 }
+\value{
+Returns a character vector of package names.
+}
 \description{
 List all packages in the Futureverse
 }
