@@ -23,7 +23,6 @@ most common Futureverse packages in one go.
 Call:
 
 ```r
-options(repos = c("https://futureverse.r-universe.dev", getOption("repos")))
 install.packages("futureverse")
 ```
 

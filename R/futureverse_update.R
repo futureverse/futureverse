@@ -6,6 +6,9 @@
 #'
 #' @inheritParams futureverse_deps
 #'
+#' @return
+#' Returns nothing; outputs installation instructions, if needed.
+#'
 #' @examples
 #' \dontrun{
 #' futureverse_update()

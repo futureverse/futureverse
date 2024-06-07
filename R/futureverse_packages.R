@@ -1,7 +1,10 @@
 #' List all packages in the Futureverse
 #'
 #' @param include_self Include **futureverse** in the list?
-#"
+#'
+#' @return
+#' Returns a character vector of package names.
+#'
 #' @examples
 #' futureverse_packages()
 #'
