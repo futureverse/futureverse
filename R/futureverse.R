@@ -9,5 +9,5 @@ ignore_unused_imports <- function() {
   furrr::future_map
   future::future
   future.apply::future_apply
-  progressr::progress
+  progressr::progressor
 }
