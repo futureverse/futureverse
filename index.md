@@ -13,10 +13,10 @@ Start by configuring Futureverse to parallelize on the current computer:
 future::plan(future::multisession)
 ```
 
-After this, you can tweak your existing
+After this, all it takes is a minor tweak to make your existing
 [`lapply()`](https://rdrr.io/r/base/lapply.html), `map()`, or
 [`foreach()`](https://rdrr.io/pkg/foreach/man/foreach.html) code to run
-in parallel with a minor adjustment, e.g.
+in parallel, e.g.
 
 ``` r
 ## future.apply: futurized version of base R apply
