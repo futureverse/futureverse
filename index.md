@@ -29,16 +29,10 @@ library(furrr)
 y <- X |>        map(slow_fcn)
 y <- X |> future_map(slow_fcn)
 
-## foreach: futurized version (modern)
+## foreach: futurized version
 library(foreach)
 y <- foreach(x = X) %do%       slow_fcn(x)
 y <- foreach(x = X) %dofuture% slow_fcn(x)
-
-## foreach: futurized version (traditional)
-library(foreach)
-doFuture::registerDoFuture()
-y <- foreach(x = X) %do%    slow_fcn(x)
-y <- foreach(x = X) %dopar% slow_fcn(x)
 ```
 
 ## Installation
