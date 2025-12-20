@@ -1,7 +1,9 @@
 # Version (development version)
 
- * ...
- 
+## Miscellaneous
+
+ * Add **RhpcBLASctl** as a Suggested package.
+
 
 # Version 0.1.0 [2024-06-06]
 
