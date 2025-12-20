@@ -1,3 +1,10 @@
+# Version 0.1.1 [2025-12-20]
+
+## Miscellaneous
+
+ * Add **RhpcBLASctl** as a Suggested package.
+
+
 # Version 0.1.0 [2024-06-06]
 
 ## Significant Changes
