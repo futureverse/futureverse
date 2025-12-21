@@ -71,10 +71,10 @@ to install also additional [parallel backends]:
 
 ## Want to learn more?
 
-* Tutorials and Workshops: https://www.futureverse.org/tutorials.html
-* Blog: https://www.futureverse.org/blog.html
-* Publications: https://www.futureverse.org/publications.html
-* Support: https://github.com/orgs/futureverse/discussions
+* Tutorials and Workshops: <https://www.futureverse.org/tutorials.html>
+* Blog: <https://www.futureverse.org/blog.html>
+* Publications: <https://www.futureverse.org/publications.html>
+* Support: <https://github.com/orgs/futureverse/discussions>
 
 
 [parallel backends]: https://www.futureverse.org/backends.html
