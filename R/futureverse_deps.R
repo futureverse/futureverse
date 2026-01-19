@@ -1,7 +1,7 @@
 #' List all Futureverse dependencies
 #'
 #' @param recursive If \code{TRUE}, will also list all dependencies of
-#'   tidyverse packages.
+#'   Futureverse packages.
 #'
 #' @param repos The repositories to use to check for updates.
 #'   Defaults to \code{getOption("repos")}.

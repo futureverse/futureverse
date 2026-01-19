@@ -8,7 +8,7 @@ futureverse_update(recursive = FALSE, repos = getOption("repos"))
 }
 \arguments{
 \item{recursive}{If \code{TRUE}, will also list all dependencies of
-tidyverse packages.}
+Futureverse packages.}
 
 \item{repos}{The repositories to use to check for updates.
 Defaults to \code{getOption("repos")}.}

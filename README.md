@@ -62,7 +62,7 @@ to install also additional [parallel backends]:
 
 * **[future.mirai]** - a modern alternative to built-in
   `plan(multisession)`
-* **[future.callr]** - a memory efficient alternative to built-in
+* **[future.callr]** - a memory-efficient alternative to built-in
   `plan(multisession)`
 * **[future.batchtools]** - parallelize on HPC job schedulers; Load
   Sharing Facility ([LSF]), [OpenLava], [TORQUE/PBS], Sun/Son
