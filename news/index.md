@@ -1,6 +1,12 @@
 # Changelog
 
+## Version (development version)
+
+- …
+
 ## Version 0.1.1
+
+CRAN release: 2025-12-20
 
 ### Miscellaneous
 

@@ -67,8 +67,8 @@ backends](https://www.futureverse.org/backends.html):
 
 - **[future.mirai](https://future.mirai.futureverse.org)** - a modern
   alternative to built-in `plan(multisession)`
-- **[future.callr](https://future.callr.futureverse.org)** - a memory
-  efficient alternative to built-in `plan(multisession)`
+- **[future.callr](https://future.callr.futureverse.org)** - a
+  memory-efficient alternative to built-in `plan(multisession)`
 - **[future.batchtools](https://future.batchtools.futureverse.org)** -
   parallelize on HPC job schedulers; Load Sharing Facility
   ([LSF](https://en.wikipedia.org/wiki/Platform_LSF)),

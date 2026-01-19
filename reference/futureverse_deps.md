@@ -12,7 +12,7 @@ futureverse_deps(recursive = FALSE, repos = getOption("repos"))
 
 - recursive:
 
-  If `TRUE`, will also list all dependencies of tidyverse packages.
+  If `TRUE`, will also list all dependencies of Futureverse packages.
 
 - repos:
 
