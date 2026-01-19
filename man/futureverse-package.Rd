@@ -4,11 +4,11 @@
 \name{futureverse-package}
 \alias{futureverse}
 \alias{futureverse-package}
-\title{futureverse: Install the 'Futureverse' in One Go}
+\title{futureverse: Install 'Futureverse' in One Go}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-The 'Futureverse' is a set of packages for parallel and distributed process with the 'future' package at its core, cf. Bengtsson (2021) \doi{10.32614/RJ-2021-048}. This package is designed to make it easy to install and load multiple 'Futureverse' packages in a single step. This package is intended for end-users, interactive use, and R scripts. Packages must not list it as a dependency - instead, explicitly declare each 'Futureverse' package as a dependency as needed.
+The 'Futureverse' is a set of packages for parallel and distributed processing with the 'future' package at its core, cf. Bengtsson (2021) \doi{10.32614/RJ-2021-048}. This package is designed to make it easy to install common 'Futureverse' packages in a single step. This package is intended for end-users, interactive use, and R scripts. Packages must not list it as a dependency - instead, explicitly declare each 'Futureverse' package as a dependency as needed.
 }
 \seealso{
 Useful links:
