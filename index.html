@@ -63,6 +63,7 @@
     <li><a class="external-link dropdown-item" href="https://future.callr.futureverse.org">future.callr (backend)</a></li>
     <li><a class="external-link dropdown-item" href="https://future.mirai.futureverse.org">future.mirai (backend)</a></li>
     <li><a class="external-link dropdown-item" href="https://future.tests.futureverse.org">future.tests</a></li>
+    <li><a class="external-link dropdown-item" href="https://futurize.futureverse.org">futurize (map-reduce)</a></li>
     <li><a class="external-link dropdown-item" href="https://globals.futureverse.org">globals</a></li>
     <li><a class="external-link dropdown-item" href="https://listenv.futureverse.org">listenv</a></li>
     <li><a class="external-link dropdown-item" href="https://parallelly.futureverse.org">parallelly</a></li>
@@ -89,85 +90,29 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><div class="section level1">
+  <main id="main" class="col-md-9">
+<div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="r-package-futureverse---install-futureverse-in-one-go-">R package ‘futureverse’ - Install ‘Futureverse’ in One Go <a class="anchor" aria-label="anchor" href="#r-package-futureverse---install-futureverse-in-one-go-"></a>
+<img src="logo.png" class="logo" alt=""><h1 id="futureverse-install-futureverse-in-one-go-">futureverse: Install ‘Futureverse’ in One Go <a class="anchor" aria-label="anchor" href="#futureverse-install-futureverse-in-one-go-"></a>
 </h1>
-</div>
-<p>The <a href="https://www.futureverse.org" class="external-link">Futureverse</a> is a unifying framework for parallelization and distributed processing in R. This package, <strong>futureverse</strong>, is a utility wrapper package that makes it <em>easy to install</em> most common Futureverse packages <em>in one go</em>.</p>
-<div class="section level2">
-<h2 id="tldr">TL;DR<a class="anchor" aria-label="anchor" href="#tldr"></a>
-</h2>
-<p>Start by configuring Futureverse to parallelize on the current computer:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">future</span><span class="fu">::</span><span class="fu"><a href="https://future.futureverse.org/reference/plan.html" class="external-link">plan</a></span><span class="op">(</span><span class="fu">future</span><span class="fu">::</span><span class="va"><a href="https://future.futureverse.org/reference/multisession.html" class="external-link">multisession</a></span><span class="op">)</span></span></code></pre></div>
-<p>After this, all it takes is a minor tweak to make your existing <code><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply()</a></code>, <code>map()</code>, or <code><a href="https://rdrr.io/pkg/foreach/man/foreach.html" class="external-link">foreach()</a></code> code to run in parallel, e.g.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">## future.apply: futurized version of base R apply</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://future.apply.futureverse.org" class="external-link">future.apply</a></span><span class="op">)</span></span>
-<span><span class="va">y</span> <span class="op">&lt;-</span>        <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">slow_fcn</span><span class="op">)</span></span>
-<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://future.apply.futureverse.org/reference/future_lapply.html" class="external-link">future_lapply</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">slow_fcn</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## furrr: futurized version of purrr</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/DavisVaughan/furrr" class="external-link">furrr</a></span><span class="op">)</span></span>
-<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="va">X</span> <span class="op">|&gt;</span>        <span class="fu">map</span><span class="op">(</span><span class="va">slow_fcn</span><span class="op">)</span></span>
-<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="va">X</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://furrr.futureverse.org/reference/future_map.html" class="external-link">future_map</a></span><span class="op">(</span><span class="va">slow_fcn</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## foreach: futurized version</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/RevolutionAnalytics/foreach" class="external-link">foreach</a></span><span class="op">)</span></span>
-<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/foreach/man/foreach.html" class="external-link">foreach</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/foreach/man/foreach.html" class="external-link">%do%</a></span>       <span class="fu">slow_fcn</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/foreach/man/foreach.html" class="external-link">foreach</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">)</span> <span class="op">%dofuture%</span> <span class="fu">slow_fcn</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>Call:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<p>R package futureverse is available on <a href="https://cran.r-project.org/package=futureverse" class="external-link">CRAN</a> and can be installed in R as:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"futureverse"</span><span class="op">)</span></span></code></pre></div>
-<p>to install:</p>
-<ul>
-<li>
-<strong><a href="https://future.futureverse.org" class="external-link">future</a></strong> - the core Futureverse package</li>
-<li>
-<strong><a href="https://future.apply.futureverse.org" class="external-link">future.apply</a></strong> - Futureverse variants of base-R apply functions</li>
-<li>
-<strong><a href="https://furrr.futureverse.org" class="external-link">furrr</a></strong> - Futureverse variants of <strong>purrr</strong> apply functions</li>
-<li>
-<strong><a href="https://doFuture.futureverse.org" class="external-link">doFuture</a></strong> - Futureverse adaptors for the <strong>foreach</strong> package</li>
-<li>
-<strong><a href="https://progressr.futureverse.org" class="external-link">progressr</a></strong> - Near-live progress updates when using Futureverse</li>
-</ul>
-<p>Call:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"futureverse"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p>to install also additional <a href="https://www.futureverse.org/backends.html" class="external-link">parallel backends</a>:</p>
-<ul>
-<li>
-<strong><a href="https://future.mirai.futureverse.org" class="external-link">future.mirai</a></strong> - a modern alternative to built-in <code>plan(multisession)</code>
-</li>
-<li>
-<strong><a href="https://future.callr.futureverse.org" class="external-link">future.callr</a></strong> - a memory-efficient alternative to built-in <code>plan(multisession)</code>
-</li>
-<li>
-<strong><a href="https://future.batchtools.futureverse.org" class="external-link">future.batchtools</a></strong> - parallelize on HPC job schedulers; Load Sharing Facility (<a href="https://en.wikipedia.org/wiki/Platform_LSF" class="external-link">LSF</a>), <a href="https://en.wikipedia.org/wiki/OpenLava" class="external-link">OpenLava</a>, <a href="https://en.wikipedia.org/wiki/TORQUE" class="external-link">TORQUE/PBS</a>, Sun/Son of/Oracle/Univa/Altair Grid Engine (<a href="https://en.wikipedia.org/wiki/Oracle_Grid_Engine" class="external-link">SGE</a>), <a href="https://en.wikipedia.org/wiki/Slurm_Workload_Manager" class="external-link">Slurm</a>
-</li>
-</ul>
-</div>
-<div class="section level2">
-<h2 id="want-to-learn-more">Want to learn more?<a class="anchor" aria-label="anchor" href="#want-to-learn-more"></a>
-</h2>
-<ul>
-<li>Tutorials and Workshops: <a href="https://www.futureverse.org/tutorials.html" class="external-link uri">https://www.futureverse.org/tutorials.html</a>
-</li>
-<li>Blog: <a href="https://www.futureverse.org/blog.html" class="external-link uri">https://www.futureverse.org/blog.html</a>
-</li>
-<li>Publications: <a href="https://www.futureverse.org/publications.html" class="external-link uri">https://www.futureverse.org/publications.html</a>
-</li>
-<li>Support: <a href="https://github.com/orgs/futureverse/discussions" class="external-link uri">https://github.com/orgs/futureverse/discussions</a>
-</li>
-</ul>
+<div class="section level3">
+<h3 id="pre-release-version">Pre-release version<a class="anchor" aria-label="anchor" href="#pre-release-version"></a>
+</h3>
+<p>To install the pre-release version that is available in Git branch <code>develop</code> on GitHub, use:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"futureverse/futureverse"</span>, ref<span class="op">=</span><span class="st">"develop"</span><span class="op">)</span></span></code></pre></div>
+<p>This will install the package from source.</p>
 </div>
 </div>
+</div>
+
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
@@ -186,6 +131,12 @@
 </ul>
 </div>
 
+<div class="community">
+<h2 data-toc-skip>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CONTRIBUTING.html">Contributing guide</a></li>
+</ul>
+</div>
 
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
@@ -201,7 +152,12 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://CRAN.R-project.org/web/checks/check_results_futureverse.html" class="external-link"><img border="0" src="https://www.r-pkg.org/badges/version/futureverse" alt="CRAN check status"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>
