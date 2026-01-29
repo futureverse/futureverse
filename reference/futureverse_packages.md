@@ -22,6 +22,6 @@ Returns a character vector of package names.
 
 ``` r
 futureverse_packages()
-#> [1] "future"       "future.apply" "furrr"        "doFuture"     "progressr"   
-#> [6] "futureverse" 
+#> [1] "future"       "futurize"     "future.apply" "furrr"        "doFuture"    
+#> [6] "progressr"    "futureverse" 
 ```
