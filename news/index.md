@@ -1,8 +1,8 @@
 # Changelog
 
-## Version (development version)
+## Version 0.2.0
 
-### Miscellaneous
+### Significant Changes
 
 - Add **futurize** as an imported package.
 
