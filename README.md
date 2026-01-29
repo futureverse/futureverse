@@ -19,20 +19,21 @@ After this, all it takes is a minor tweak to make your existing
 `lapply()`, `map()`, or `foreach()` code to run in parallel, e.g.
 
 ```r
-## future.apply: futurized version of base R apply
-library(future.apply)
-y <-        lapply(X, slow_fcn)
-y <- future_lapply(X, slow_fcn)
+library(futurize)
 
-## furrr: futurized version of purrr
-library(furrr)
-y <- X |>        map(slow_fcn)
-y <- X |> future_map(slow_fcn)
+## Sequential and parallel version of base R apply
+y <- lapply(X, slow_fcn)
+y <- lapply(X, slow_fcn) |> futurize()
 
-## foreach: futurized version
+## Sequential and parallel version of purrr map
+library(purrr)
+y <- X |> map(slow_fcn)
+y <- X |> map(slow_fcn) |> futurize()
+
+## Sequential and parallel version of foreach
 library(foreach)
-y <- foreach(x = X) %do%       slow_fcn(x)
-y <- foreach(x = X) %dofuture% slow_fcn(x)
+y <- foreach(x = X) %do% slow_fcn(x)
+y <- foreach(x = X) %do% slow_fcn(x) |> futurize()
 ```
 
 
@@ -47,6 +48,7 @@ install.packages("futureverse")
 to install:
 
  * **[future]** - the core Futureverse package
+ * **[futurize]** - the one-stop map-reduce package
  * **[future.apply]** - Futureverse variants of base-R apply functions
  * **[furrr]** - Futureverse variants of **purrr** apply functions
  * **[doFuture]** - Futureverse adaptors for the **foreach** package
@@ -71,15 +73,16 @@ to install also additional [parallel backends]:
 
 ## Want to learn more?
 
-* Tutorials and Workshops: https://www.futureverse.org/tutorials.html
-* Blog: https://www.futureverse.org/blog.html
-* Publications: https://www.futureverse.org/publications.html
-* Support: https://github.com/orgs/futureverse/discussions
+* Tutorials and Workshops: <https://www.futureverse.org/tutorials.html>
+* Blog: <https://www.futureverse.org/blog.html>
+* Publications: <https://www.futureverse.org/publications.html>
+* Support: <https://github.com/orgs/futureverse/discussions>
 
 
 [parallel backends]: https://www.futureverse.org/backends.html
 [Futureverse]: https://www.futureverse.org
 [future]: https://future.futureverse.org
+[futurize]: https://futurize.futureverse.org
 [future.batchtools]: https://future.batchtools.futureverse.org
 [future.callr]: https://future.callr.futureverse.org
 [future.mirai]: https://future.mirai.futureverse.org
