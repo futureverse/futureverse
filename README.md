@@ -21,9 +21,6 @@ After this, all it takes is a minor tweak to make your existing
 ```r
 library(futurize)
 
-## parallelize on local computer
-plan(multisession)
-
 ## Sequential and parallel version of base R apply
 y <- lapply(X, slow_fcn)
 y <- lapply(X, slow_fcn) |> futurize()
@@ -76,10 +73,10 @@ to install also additional [parallel backends]:
 
 ## Want to learn more?
 
-* Tutorials and Workshops: https://www.futureverse.org/tutorials.html
-* Blog: https://www.futureverse.org/blog.html
-* Publications: https://www.futureverse.org/publications.html
-* Support: https://github.com/orgs/futureverse/discussions
+* Tutorials and Workshops: <https://www.futureverse.org/tutorials.html>
+* Blog: <https://www.futureverse.org/blog.html>
+* Publications: <https://www.futureverse.org/publications.html>
+* Support: <https://github.com/orgs/futureverse/discussions>
 
 
 [parallel backends]: https://www.futureverse.org/backends.html
