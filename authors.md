@@ -21,3 +21,16 @@ doi:10.32614/RJ-2021-048
       volume = {13},
       number = {2},
     }
+
+Henrik Bengtsson, A Unified Approach to Concurrent, Parallel Map-Reduce
+in R using Futures, arXiv (2026), https://arxiv.org/abs/2601.17578
+
+    @Misc{Bengtsson-Futurize,
+      author = {Henrik Bengtsson},
+      title = {A Unified Approach to Concurrent, Parallel Map-Reduce in R using Futures},
+      year = {2026},
+      eprint = {2601.17578},
+      archiveprefix = {arXiv},
+      primaryclass = {cs.DC},
+      url = {https://arxiv.org/abs/2601.17578},
+    }

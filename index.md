@@ -1,22 +1,93 @@
-# futureverse: Install ‘Futureverse’ in One Go
+# R package ‘futureverse’ - Install ‘Futureverse’ in One Go
+
+The [Futureverse](https://www.futureverse.org) is a unifying framework
+for parallelization and distributed processing in R. This package,
+**futureverse**, is a utility wrapper package that makes it *easy to
+install* most common Futureverse packages *in one go*.
+
+## TL;DR
+
+Start by configuring Futureverse to parallelize on the current computer:
+
+``` r
+future::plan(future::multisession)
+```
+
+After this, all it takes is a minor tweak to make your existing
+[`lapply()`](https://rdrr.io/r/base/lapply.html),
+[`map()`](https://purrr.tidyverse.org/reference/map.html), or
+[`foreach()`](https://rdrr.io/pkg/foreach/man/foreach.html) code to run
+in parallel, e.g.
+
+``` r
+library(futurize)
+
+## parallelize on local computer
+plan(multisession)
+
+## Sequential and parallel version of base R apply
+y <- lapply(X, slow_fcn)
+y <- lapply(X, slow_fcn) |> futurize()
+
+## Sequential and parallel version of purrr map
+library(purrr)
+y <- X |> map(slow_fcn)
+y <- X |> map(slow_fcn) |> futurize()
+
+## Sequential and parallel version of foreach
+library(foreach)
+y <- foreach(x = X) %do% slow_fcn(x)
+y <- foreach(x = X) %do% slow_fcn(x) |> futurize()
+```
 
 ## Installation
 
-R package futureverse is available on
-[CRAN](https://cran.r-project.org/package=futureverse) and can be
-installed in R as:
+Call:
 
 ``` r
 install.packages("futureverse")
 ```
 
-### Pre-release version
+to install:
 
-To install the pre-release version that is available in Git branch
-`develop` on GitHub, use:
+- **[future](https://future.futureverse.org)** - the core Futureverse
+  package
+- **[futurize](https://futurize.futureverse.org)** - the one-stop
+  map-reduce package
+- **[future.apply](https://future.apply.futureverse.org)** - Futureverse
+  variants of base-R apply functions
+- **[furrr](https://furrr.futureverse.org)** - Futureverse variants of
+  **purrr** apply functions
+- **[doFuture](https://doFuture.futureverse.org)** - Futureverse
+  adaptors for the **foreach** package
+- **[progressr](https://progressr.futureverse.org)** - Near-live
+  progress updates when using Futureverse
+
+Call:
 
 ``` r
-remotes::install_github("futureverse/futureverse", ref="develop")
+install.packages("futureverse", dependencies = TRUE)
 ```
 
-This will install the package from source.
+to install also additional [parallel
+backends](https://www.futureverse.org/backends.html):
+
+- **[future.mirai](https://future.mirai.futureverse.org)** - a modern
+  alternative to built-in `plan(multisession)`
+- **[future.callr](https://future.callr.futureverse.org)** - a memory
+  efficient alternative to built-in `plan(multisession)`
+- **[future.batchtools](https://future.batchtools.futureverse.org)** -
+  parallelize on HPC job schedulers; Load Sharing Facility
+  ([LSF](https://en.wikipedia.org/wiki/Platform_LSF)),
+  [OpenLava](https://en.wikipedia.org/wiki/OpenLava),
+  [TORQUE/PBS](https://en.wikipedia.org/wiki/TORQUE), Sun/Son
+  of/Oracle/Univa/Altair Grid Engine
+  ([SGE](https://en.wikipedia.org/wiki/Oracle_Grid_Engine)),
+  [Slurm](https://en.wikipedia.org/wiki/Slurm_Workload_Manager)
+
+## Want to learn more?
+
+- Tutorials and Workshops: <https://www.futureverse.org/tutorials.html>
+- Blog: <https://www.futureverse.org/blog.html>
+- Publications: <https://www.futureverse.org/publications.html>
+- Support: <https://github.com/orgs/futureverse/discussions>
