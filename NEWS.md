@@ -1,13 +1,15 @@
 # Version (development version)
 
- * ...
+## Miscellaneous
+
+ * Add **futurize** as an imported package.
  
 
 # Version 0.1.1 [2025-12-20]
 
 ## Miscellaneous
 
- * Add **RhpcBLASctl** as a Suggested package.
+ * Add **RhpcBLASctl** as a suggested package.
 
 
 # Version 0.1.0 [2024-06-06]
