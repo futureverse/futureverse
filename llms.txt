@@ -22,9 +22,6 @@ in parallel, e.g.
 ``` r
 library(futurize)
 
-## parallelize on local computer
-plan(multisession)
-
 ## Sequential and parallel version of base R apply
 y <- lapply(X, slow_fcn)
 y <- lapply(X, slow_fcn) |> futurize()
