@@ -10,6 +10,7 @@ install* most common Futureverse packages *in one go*.
 Start by configuring Futureverse to parallelize on the current computer:
 
 ``` r
+
 future::plan(future::multisession)
 ```
 
@@ -20,6 +21,7 @@ After this, all it takes is a minor tweak to make your existing
 in parallel, e.g.
 
 ``` r
+
 library(futurize)
 
 ## Sequential and parallel version of base R apply
@@ -42,6 +44,7 @@ y <- foreach(x = X) %do% slow_fcn(x) |> futurize()
 Call:
 
 ``` r
+
 install.packages("futureverse")
 ```
 
@@ -63,6 +66,7 @@ to install:
 Call:
 
 ``` r
+
 install.packages("futureverse", dependencies = TRUE)
 ```
 
