@@ -10,5 +10,6 @@ ignore_unused_imports <- function() {
   future.apply::future_apply
   furrr::future_map
   doFuture::registerDoFuture
+  progressify::progressify
   progressr::progressor
 }
