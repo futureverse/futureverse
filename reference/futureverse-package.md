@@ -17,5 +17,10 @@ Useful links:
 
 ## Author
 
-**Maintainer**: Henrik Bengtsson <henrikb@braju.com> \[copyright
-holder\]
+**Maintainer**: Henrik Bengtsson <henrikb@braju.com>
+([ORCID](https://orcid.org/0000-0002-7579-5165)) \[copyright holder\]
+
+Authors:
+
+- Henrik Bengtsson <henrikb@braju.com>
+  ([ORCID](https://orcid.org/0000-0002-7579-5165)) \[copyright holder\]

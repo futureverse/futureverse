@@ -2,7 +2,9 @@
 
 ## Version (development version)
 
-- …
+### Significant Changes
+
+- Add **progressify** as an imported package.
 
 ## Version 0.2.0
 
