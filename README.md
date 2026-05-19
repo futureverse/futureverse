@@ -39,6 +39,8 @@ y <- foreach(x = X) %do% slow_fcn(x) |> futurize()
 To get progress updates, add a `|> progressify()`, e.g.
 
 ```r
+library(progressify)
+
 y <- lapply(X, slow_fcn) |> progressify() |> futurize()
 y <- X |> map(slow_fcn) |> progressify() |> futurize()
 y <- foreach(x = X) %do% slow_fcn(x) |> progressify() |> futurize()
@@ -102,6 +104,7 @@ to install also additional [parallel backends]:
 [furrr]: https://furrr.futureverse.org
 [doFuture]: https://doFuture.futureverse.org
 [progressr]: https://progressr.futureverse.org
+[progressify]: https://progressify.futureverse.org
 [TORQUE/PBS]: https://en.wikipedia.org/wiki/TORQUE
 [Slurm]: https://en.wikipedia.org/wiki/Slurm_Workload_Manager
 [SGE]: https://en.wikipedia.org/wiki/Oracle_Grid_Engine
