@@ -39,6 +39,15 @@ y <- foreach(x = X) %do% slow_fcn(x)
 y <- foreach(x = X) %do% slow_fcn(x) |> futurize()
 ```
 
+To get progress updates, add a `|> progressify()`, e.g.
+
+``` r
+
+y <- lapply(X, slow_fcn) |> progressify() |> futurize()
+y <- X |> map(slow_fcn) |> progressify() |> futurize()
+y <- foreach(x = X) %do% slow_fcn(x) |> progressify() |> futurize()
+```
+
 ## Installation
 
 Call:
@@ -52,16 +61,21 @@ to install:
 
 - **[future](https://future.futureverse.org)** - the core Futureverse
   package
-- **[futurize](https://futurize.futureverse.org)** - the one-stop
-  map-reduce package
+- **[futurize](https://futurize.futureverse.org)** - the one-stop and
+  package for map-reduce parallelization
+- **[progressr](https://progressr.futureverse.org)** - Near-live
+  progress updates when using Futureverse
+- **\[progressify\]** - the one-stop package for map-reduce progress
+  updates
+
+and support packages:
+
 - **[future.apply](https://future.apply.futureverse.org)** - Futureverse
   variants of base-R apply functions
 - **[furrr](https://furrr.futureverse.org)** - Futureverse variants of
   **purrr** apply functions
 - **[doFuture](https://doFuture.futureverse.org)** - Futureverse
   adaptors for the **foreach** package
-- **[progressr](https://progressr.futureverse.org)** - Near-live
-  progress updates when using Futureverse
 
 Call:
 
