@@ -61,17 +61,17 @@ install.packages("futureverse")
 
 to install:
 
-- **[future](https://future.futureverse.org)** - the core Futureverse
-  package
 - **[futurize](https://futurize.futureverse.org)** - the one-stop and
   package for map-reduce parallelization
-- **[progressr](https://progressr.futureverse.org)** - Near-live
-  progress updates when using Futureverse
 - **[progressify](https://progressify.futureverse.org)** - the one-stop
   package for map-reduce progress updates
 
 and support packages:
 
+- **[future](https://future.futureverse.org)** - the core Futureverse
+  package
+- **[progressr](https://progressr.futureverse.org)** - Near-live
+  progress updates when using Futureverse
 - **[future.apply](https://future.apply.futureverse.org)** - Futureverse
   variants of base-R apply functions
 - **[furrr](https://furrr.futureverse.org)** - Futureverse variants of
