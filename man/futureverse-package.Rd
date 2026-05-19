@@ -14,6 +14,8 @@ The 'Futureverse' is a set of packages for parallel and distributed processing w
 Useful links:
 \itemize{
   \item \url{https://www.futureverse.org}
+  \item \url{https://github.com/futureverse/futureverse/}
+  \item Report bugs at \url{https://github.com/futureverse/futureverse/issues}
 }
 
 }
