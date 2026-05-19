@@ -59,14 +59,14 @@ Call:
 install.packages("futureverse")
 ```
 
-to install:
+to install the two main go-to packages:
 
-- **[futurize](https://futurize.futureverse.org)** - the one-stop and
-  package for map-reduce parallelization
-- **[progressify](https://progressify.futureverse.org)** - the one-stop
-  package for map-reduce progress updates
+- **[futurize](https://futurize.futureverse.org)** - parallelize common
+  map-reduce and domain-specific function calls
+- **[progressify](https://progressify.futureverse.org)** - report on
+  progress for common map-reduce and domain-specific function
 
-and support packages:
+together with support packages:
 
 - **[future](https://future.futureverse.org)** - the core Futureverse
   package
