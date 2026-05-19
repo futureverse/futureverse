@@ -7,6 +7,9 @@
 
 ## Citation
 
+Source:
+[`inst/CITATION`](https://github.com/futureverse/futureverse/blob/HEAD/inst/CITATION)
+
 Henrik Bengtsson, A Unifying Framework for Parallel and Distributed
 Processing in R using Futures, The R Journal (2021) 13:2, pages 208-227,
 doi:10.32614/RJ-2021-048

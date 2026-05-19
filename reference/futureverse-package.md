@@ -15,6 +15,10 @@ Useful links:
 
 - <https://www.futureverse.org>
 
+- <https://github.com/futureverse/futureverse/>
+
+- Report bugs at <https://github.com/futureverse/futureverse/issues>
+
 ## Author
 
 **Maintainer**: Henrik Bengtsson <henrikb@braju.com>
