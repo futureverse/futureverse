@@ -43,6 +43,8 @@ To get progress updates, add a `|> progressify()`, e.g.
 
 ``` r
 
+library(progressify)
+
 y <- lapply(X, slow_fcn) |> progressify() |> futurize()
 y <- X |> map(slow_fcn) |> progressify() |> futurize()
 y <- foreach(x = X) %do% slow_fcn(x) |> progressify() |> futurize()
@@ -65,8 +67,8 @@ to install:
   package for map-reduce parallelization
 - **[progressr](https://progressr.futureverse.org)** - Near-live
   progress updates when using Futureverse
-- **\[progressify\]** - the one-stop package for map-reduce progress
-  updates
+- **[progressify](https://progressify.futureverse.org)** - the one-stop
+  package for map-reduce progress updates
 
 and support packages:
 
