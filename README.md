@@ -55,15 +55,17 @@ Call:
 install.packages("futureverse")
 ```
 
-to install:
+to install the two main go-to packages:
+
+ * **[futurize]** - parallelize common map-reduce and domain-specific
+   function calls
+ * **[progressify]** - report on progress for common map-reduce and
+   domain-specific function
+ 
+together with support packages:
 
  * **[future]** - the core Futureverse package
- * **[futurize]** - the one-stop and package for map-reduce parallelization
  * **[progressr]** - Near-live progress updates when using Futureverse
- * **[progressify]** - the one-stop package for map-reduce progress updates
- 
-and support packages:
-
  * **[future.apply]** - Futureverse variants of base-R apply functions
  * **[furrr]** - Futureverse variants of **purrr** apply functions
  * **[doFuture]** - Futureverse adaptors for the **foreach** package
