@@ -44,6 +44,7 @@ To get progress updates, add a `|> progressify()`, e.g.
 ``` r
 
 library(progressify)
+handlers(global = TRUE)
 
 y <- lapply(X, slow_fcn) |> progressify() |> futurize()
 y <- X |> map(slow_fcn) |> progressify() |> futurize()
