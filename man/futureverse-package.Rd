@@ -8,17 +8,24 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-The 'Futureverse' is a set of packages for parallel and distributed processing with the 'future' package at its core, cf. Bengtsson (2021) \doi{10.32614/RJ-2021-048}. This package is designed to make it easy to install common 'Futureverse' packages in a single step. This package is intended for end-users, interactive use, and R scripts. Packages must not list it as a dependency - instead, explicitly declare each 'Futureverse' package as a dependency as needed.
+The 'Futureverse' is a set of packages for parallel and distributed processing with the 'future' package at its core (Bengtsson, 2021, \doi{10.32614/RJ-2021-048}). Another notable component is the 'futurize' package (Bengtsson, 2026, \doi{10.48550/arXiv.2601.17578}) for turning common sequential calls into parallel ones via a single function futurize(). Similarly, the progressify() of the 'progressify' package makes common calls to report of progress. This package is designed to make it easy to install common 'Futureverse' packages in a single step. This package is intended for end-users, interactive use, and R scripts. Packages must not list it as a dependency - instead, explicitly declare each 'Futureverse' package as a dependency as needed.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://www.futureverse.org}
+  \item \url{https://github.com/futureverse/futureverse/}
+  \item Report bugs at \url{https://github.com/futureverse/futureverse/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Henrik Bengtsson \email{henrikb@braju.com} [copyright holder]
+\strong{Maintainer}: Henrik Bengtsson \email{henrikb@braju.com} (\href{https://orcid.org/0000-0002-7579-5165}{ORCID}) [copyright holder]
+
+Authors:
+\itemize{
+  \item Henrik Bengtsson \email{henrikb@braju.com} (\href{https://orcid.org/0000-0002-7579-5165}{ORCID}) [copyright holder]
+}
 
 }
 \keyword{internal}

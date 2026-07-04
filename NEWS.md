@@ -1,3 +1,10 @@
+# Version 0.3.0 [2026-07-04]
+
+## Significant Changes
+
+ * Add **progressify** as an imported package.
+
+
 # Version 0.2.0 [2026-01-29]
 
 ## Significant Changes

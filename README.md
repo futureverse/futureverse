@@ -36,6 +36,17 @@ y <- foreach(x = X) %do% slow_fcn(x)
 y <- foreach(x = X) %do% slow_fcn(x) |> futurize()
 ```
 
+To get progress updates, add a `|> progressify()`, e.g.
+
+```r
+library(progressify)
+handlers(global = TRUE)
+
+y <- lapply(X, slow_fcn) |> progressify() |> futurize()
+y <- X |> map(slow_fcn) |> progressify() |> futurize()
+y <- foreach(x = X) %do% slow_fcn(x) |> progressify() |> futurize()
+```
+
 
 ## Installation
 
@@ -45,14 +56,20 @@ Call:
 install.packages("futureverse")
 ```
 
-to install:
+to install the two main go-to packages:
+
+ * **[futurize]** - parallelize common map-reduce and domain-specific
+   function calls
+ * **[progressify]** - report on progress for common map-reduce and
+   domain-specific function
+ 
+together with support packages:
 
  * **[future]** - the core Futureverse package
- * **[futurize]** - the one-stop map-reduce package
+ * **[progressr]** - Near-live progress updates when using Futureverse
  * **[future.apply]** - Futureverse variants of base-R apply functions
  * **[furrr]** - Futureverse variants of **purrr** apply functions
  * **[doFuture]** - Futureverse adaptors for the **foreach** package
- * **[progressr]** - Near-live progress updates when using Futureverse
 
 Call:
 
@@ -90,6 +107,7 @@ to install also additional [parallel backends]:
 [furrr]: https://furrr.futureverse.org
 [doFuture]: https://doFuture.futureverse.org
 [progressr]: https://progressr.futureverse.org
+[progressify]: https://progressify.futureverse.org
 [TORQUE/PBS]: https://en.wikipedia.org/wiki/TORQUE
 [Slurm]: https://en.wikipedia.org/wiki/Slurm_Workload_Manager
 [SGE]: https://en.wikipedia.org/wiki/Oracle_Grid_Engine
