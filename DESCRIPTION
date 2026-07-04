@@ -1,6 +1,6 @@
 Package: futureverse
 Title: Install 'Futureverse' in One Go
-Version: 0.3.0-9000
+Version: 0.3.0-9001
 Imports:
     future,
     futurize,
@@ -17,7 +17,7 @@ Suggests:
 Authors@R: c(person("Henrik", "Bengtsson", role=c("aut", "cre", "cph"),
                     email = "henrikb@braju.com",
                     comment = c(ORCID = "0000-0002-7579-5165")))
-Description: The 'Futureverse' is a set of packages for parallel and distributed processing with the 'future' package at its core (Bengtsson, 2021, <doi:10.32614/RJ-2021-048>). Another notable component is the 'futurize' package (Bengtsson, 2026, <doi:10.48550/arXiv.2601.17578>) for turning common sequential calls into parallel ones via a single function futurize(). Similarly, the progressify() of the 'progressify' package makes common calls to report of progress. This package is designed to make it easy to install common 'Futureverse' packages in a single step. This package is intended for end-users, interactive use, and R scripts. Packages must not list it as a dependency - instead, explicitly declare each 'Futureverse' package as a dependency as needed.
+Description: The 'Futureverse' is a set of packages for parallel and distributed processing with the 'future' package at its core (Bengtsson, 2021, <doi:10.32614/RJ-2021-048>). Another notable component is the 'futurize' package (Bengtsson, 2026, <doi:10.48550/arXiv.2601.17578>) for turning common sequential calls into parallel ones via a single function futurize(). Similarly, the progressify() of the 'progressify' package makes common calls to report on progress. This package is designed to make it easy to install common 'Futureverse' packages in a single step. This package is intended for end-users, interactive use, and R scripts. Packages must not list it as a dependency - instead, explicitly declare each 'Futureverse' package as a dependency as needed.
 URL: https://www.futureverse.org, https://github.com/futureverse/futureverse/
 BugReports: https://github.com/futureverse/futureverse/issues
 License: MIT + file LICENSE
