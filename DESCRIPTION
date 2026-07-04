@@ -1,6 +1,6 @@
 Package: futureverse
 Title: Install 'Futureverse' in One Go
-Version: 0.2.0-9006
+Version: 0.2.0-9007
 Imports:
     future,
     futurize,
