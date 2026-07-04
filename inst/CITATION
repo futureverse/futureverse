@@ -11,7 +11,6 @@ utils::bibentry(
   year = "2021",
   journal = "The R Journal",
   doi = "10.32614/RJ-2021-048",
-  url = "https://doi.org/10.32614/RJ-2021-048",
   pages = "208--227",
   volume = "13",
   number = "2",
@@ -42,7 +41,7 @@ utils::bibentry(
   eprint = "2601.17578",
   archivePrefix = "arXiv",
   primaryClass = "cs.DC",
-  url = "https://arxiv.org/abs/2601.17578",
+  doi = "10.48550/arXiv.2601.17578",
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   # Plain-text citation:
@@ -51,6 +50,6 @@ utils::bibentry(
     "Henrik Bengtsson, ",
     "A Unified Approach to Concurrent, Parallel Map-Reduce in R using Futures, ",
     "arXiv (2026), ",
-    "https://arxiv.org/abs/2601.17578"
+    "doi:10.48550/arXiv.2601.17578"
   )
 )
